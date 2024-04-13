@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reusltats de recherche</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <header>
+        <div class="logo">AM2000</div>
+        <nav class="menu">
+            <a href="/" id="navigation">Revenir à l'acceuil</a>
+        </nav>
+    </header>
+    <main>
+        <section class="search-bar">
+            <h2>Bar de recherche</h2>
+            <br>
+            <div class="search-container">
+                <form action="/recherche" method="get" class="search-container">
+                    <input type="text" placeholder="Rechercher..." name="search" id="champRecherche">
+                    <button type="submit" id="boutonRecherche">Rechercher</button>
+                </form>    
+            </div>    
+        </section>
+        <h3>Résultats de recherche :</h3>
+        <div class="content-container">
+    		<div class="cards-container">
+        		{% if resultats %}
+            		{% for animal in resultats %}
+                		<div class="animal-card"> 
+                    		<p>Nom : {{ animal.nom }}</p>
+                    		<p>Description : {{ animal.description }}</p>
+                    		<p><a href="{{ url_for('afficher_detail_animal', id=animal['id']) }}" >Pour en savoir plus, veuillez suivre ce lien</a></p>
+                		</div>
+            		{% endfor %}
+        		{% endif %}
+    		</div>
+    		<div class="image-container">
+        		<img src="adoptdog-768x426.jpg" alt="Description de l'image" id="image_chien">
+    		</div>
+		</div>
+    </main>
+</body>
+</html>

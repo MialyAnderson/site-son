@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Dancing Script", cursive;
+    font-size: 16px;
+    line-height: 1.5;
+    color :#444;    
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px; 
+    color: #444;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+    font-style: italic; 
+}
+
+
+header {
+    height: 1rem ;
+    background-color:#444;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 2rem;
+}
+
+.logo {
+    color:white;
+     font-size: 2rem;
+     font-weight: bolder;
+     font-style: italic;
+     padding: 0 2rem;
+     font-family: "Dancing Script", cursive;
+     
+}
+
+#navigation {
+	color: white;
+	font-family: "Dancing Script", cursive;
+	padding: 0 1.5rem;
+	text-decoration:none;
+}
+
+#navigation:hover {
+    text-decoration: underline; 
+    color: cornflowerblue;
+}
+
+
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+    color: #000;
+}
+
+.search-title-container {
+    margin-bottom: 20px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+#champRecherche {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#boutonRecherche {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#boutonRecherche:hover {
+    background-color: #333;
+}
+
+.introduction {
+    padding: 20px;
+    font-family: "Dancing Script", cursive;
+    font-size: 16px;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    color :#444;
+}
+
+.animals-section {
+    padding: 20px;
+    background-color: #fff;
+    color: #000;
+    margin-top: 1rem;
+}
+
+.animal-card {
+    background-color: #eee;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.container_form {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow:  5px 5px 15px black;
+    margin-bottom: 5rem;
+}
+
+#image_logo {
+    padding: 0.25rem 0.25rem;
+    float : right;
+    width: 250px;
+    margin-bottom: 2rem;
+    margin-top: 7rem;
+    margin-right: 7rem;
+}
+
+#container_champ{
+    float : left;
+    width: 1000px;
+}
+
+.boutton-style {
+    background-color: #444;
+    color: #fff; 
+    border: none;
+    padding: 12px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px; /* Rayon des coins */
+  transition: all 0.3s ease;
+}
+    
+.boutton-style:hover {
+    background-color: #444; 
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+    font-family: Arial, sans-serif;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: cornflowerblue;
+}
+
+#reclamations_questions {
+    display: none;
+}
+
+.erreur {
+    color: red;
+}
+
+.img_result {
+	width: 500px;
+    height: auto;
+    margin-left: 465px;
+}
+
+.msg_not_found {
+	margin-bottom : 0px;
+	text-align: center;
+	font-size : 30px;
+}
+
+#container_animal_triste{
+    width: 35%;
+    align-items: center;
+    margin-left : 33%;
+    
+}
+
+#animal_triste {
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+}
+
+.msg_not_found_1 {
+	margin-bottom : 5px;
+	text-align: center;
+	font-size : 30px
+}
+
+#no_result_container{
+    width: 45%;
+    margin-left : 22%;
+    align-items: center;
+}
+
+#no_result_img {
+    width: 100%;
+    height: 100%;
+    margin-left: 10%;
+}
+
+#container_bad_request {
+    width: 35%;
+    margin-left : 29%;
+    align-items: center;
+}
+
+#img_bad_request{
+    width: 100%;
+    height: 100%;
+    margin-left: 10%;
+}
+
+hr {
+  border-top: 5px dashed #444;
+}
+
+.search-section {
+    position: relative;
+}
+
+.search-bar {
+    background-image: url('DALL·E 2024-04-11 18.52.15 - Design a symbolic and abstract banner that represents animal adoption. The image should convey a sense of warmth and compassion, using soft colors and.webp'); 
+    background-size: cover; 
+    background-position: center;
+}
+
+#titre_detail {
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.content-container {
+    display: flex;
+}
+
+.cards-container {
+    width : 50%;
+}
+
+.animal-card {
+    margin-bottom: 10px; 
+    width : 100%;
+}
+
+.image-container {
+    width : 40%;
+    margin-left: 10%
+}
+
+#image_chien {
+	width:70%;
+	height: 80%;
+	margin-right: 0px;
+	margin-left: 0px;
+    max-height: 80%;
+    min-height: 80%;
+}
+
+.image-apres-recherche {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    height : 100px;
+}
+
+.animal-card-1 {
+	margin-top : 2%;
+	background-image: url('img_res.webp'); 
+    background-size: cover; 
+    background-position: center;
+}
+
+.animal-card-1 p {
+	color : #050337;
+	margin-left : 40%;
+	font-size: 20px;
+}
+
+h3 {
+	font-size : 30px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    padding: 2px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 5px black;
+    background-color:ghostwhite ;
+} 

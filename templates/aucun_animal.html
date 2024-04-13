@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reusltats de recherche</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">AM2000</div>
+        <nav class="menu">
+            <a href="/" id="navigation">Revenir à l'acceuil</a>
+        </nav>
+    </header>
+    <main>
+        <section class="search-bar">
+            <h2>Barre de recherche</h2>
+            <br>
+            <div class="search-container">
+                <form action="/recherche" method="get" class="search-container">
+                    <input type="text" placeholder="Rechercher..." name="search" id="champRecherche">
+                    <button type="submit" id="boutonRecherche">Rechercher</button>
+                </form>    
+            </div>    
+        </section>
+        <h1 class="msg_not_found_1">Aucun résultat trouvé !</h1>
+        <div id ="no_result_container">
+            <img id="no_result_img" src="{{ url_for('static', filename='DALL·E 2024-04-11 15.08.58 - Create an image featuring a collection of various sad-looking animals, including a puppy, a kitten, a rabbit, and a parrot. Each animal should display.webp') }}" alt="Aucun résultat trouvé" class="img_result">
+        </div>
+    </main>
+</body>
+</html>

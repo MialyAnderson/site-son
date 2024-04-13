@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption Animaux de Compagnie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">AM2000</div>
+        <nav class="menu">
+        	<a href="/" id="navigation">Revenir à l'acceuil</a>
+        </nav>
+    </header>
+    <main>
+
+    	<section class="search-bar">
+        	<h2>Barre de recherche</h2>
+        	<div class="search-container">
+            	<form action="/recherche" method="get" class="search-container">
+            	    <input type="text" placeholder="Rechercher..." name="search" id="champRecherche">
+            	    <button type="submit" id="boutonRecherche">Rechercher</button>
+            	</form>    
+        	</div>    
+    	</section>
+
+        <hr>
+        <br><br>
+
+        <h2>Qui sommes nous ?</h2>
+        <section class="introduction">
+    
+            <p>
+                Bienvenue chez AM2000 - Votre Animalerie Montréalaise
+            </p>
+            <br>
+            <p>
+                Chez AM2000, nous croyons fermement que chaque animal mérite une maison aimante et chaleureuse. 
+                Depuis notre ouverture à Montréal en l'an 2000, nous nous sommes engagés à offrir une expérience
+                inégalée pour les amateurs d'animaux de tous horizons.
+            </p>
+            <br>
+            <p>
+                Visitez-nous dès aujourd'hui chez AM2000 et découvrez pourquoi nous sommes bien plus qu'une
+                simple animalerie - nous sommes une famille dédiée à l'amour et au bien-être de tous les animaux.
+            </p>
+        </section>
+
+        <hr>
+        <section class="animals-section">
+            <h2>Animaux à adopter</h2>
+            <br>
+            <div class="animal-card"><p>Venez découvrir notre adorable {{ animaux[0].espece }}, {{ animaux[0].nom }}, un(e) magnifique {{ animaux[0].race }} de {{ animaux[0].age }} ans, qui attend avec impatience de trouver une famille aimante pour l'adopter.</p>
+            <p><a href="{{ url_for('afficher_detail_animal', id=animaux[0].id) }}">Pour en savoir plus, veuillez suvire ce lien </a></p>
+            </div>
+            <div class="animal-card"><p>Venez découvrir notre adorable {{ animaux[1].espece }}, {{ animaux[1].nom }}, un(e) magnifique {{ animaux[1].race }} de {{ animaux[1].age }} ans, qui attend avec impatience de trouver une famille aimante pour l'adopter.</p>
+            <p><a href="{{ url_for('afficher_detail_animal', id=animaux[1].id) }}">Pour en savoir plus, veuillez suvire ce lien </a></p>
+            </div>
+            <div class="animal-card"><p>Venez découvrir notre adorable {{ animaux[2].espece }}, {{ animaux[2].nom }}, un(e) magnifique {{ animaux[2].race }} de {{ animaux[2].age }} ans, qui attend avec impatience de trouver une famille aimante pour l'adopter.</p>
+            <p><a href="{{ url_for('afficher_detail_animal', id=animaux[2].id) }}">Pour en savoir plus, veuillez suvire ce lien </a></p>
+            </div>
+            <div class="animal-card"><p>Venez découvrir notre adorable {{ animaux[3].espece }}, {{ animaux[3].nom }}, un(e) magnifique {{ animaux[3].race }} de {{ animaux[3].age }} ans, qui attend avec impatience de trouver une famille aimante pour l'adopter.</p>
+            <p><a href="{{ url_for('afficher_detail_animal', id=animaux[3].id) }}">Pour en savoir plus, veuillez suvire ce lien </a></p>
+            </div>
+            <div class="animal-card"><p>Venez découvrir notre adorable {{ animaux[4].espece }}, {{ animaux[4].nom }}, un(e) magnifique {{ animaux[4].race }} de {{ animaux[4].age }} ans, qui attend avec impatience de trouver une famille aimante pour l'adopter.</p>
+            <p><a href="{{ url_for('afficher_detail_animal', id=animaux[4].id) }}">Pour en savoir plus, veuillez suvire ce lien </a></p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="animals-section">
+            <h2>Formulaire pour mettre son animal en adoption.</h2>
+            <br>
+
+            <div class="container_form">
+
+                <div class="container_image">
+                <img id="image_logo" src="chien_noir.png" alt="Dessin de plusieurs animaux et du logo AM200" >
+                </div>
+                
+                <div class="container_champ">
+                    <form action="/soumettre" method="post" id="formulaire">
+                        <br>
+                        <label for="nom">Quel est le nom de votre animal ?</label><br>
+                        <input type="text"  id="nom" name="nom"><br>
+                        <span id="erreur-nom" class="erreur"></span>
+
+                        <br>    
+
+                        <label for="espece">Quel est l'espèce de votre animal ? </label><br>
+                        <input type="text"  id="espece" name="espece"><br>
+                        <span id="erreur-espece" class="erreur"></span>
+
+                        <br>
+
+                        <label for="race">Quelle est la race de votre animal ?</label><br>
+                        <input type="text" id="race" name="race" ><br>
+                        <span id="erreur-race" class="erreur"></span>
+
+                        <br>
+
+                        <label for="age">Quelle est l'age de votre animal ?</label><br>
+                        <input type="text" id="age" name="age" ><br>
+                        <span id="erreur-age" class="erreur"></span>
+                        <br>
+                    
+                        <label for="description">Description de votre animal :</label><br>
+                        <textarea id="description" name="description" rows="3" cols="40"></textarea><br>
+                        <span id="erreur-description" class="erreur"></span>
+
+
+                        <br>
+
+                        <label for="courriel">Quelle est votre adresse e-mail ?</label><br>
+                        <input type="text" id="courriel" name="courriel" placeholder="exemple@domaine.com"><br>
+                        <span id="erreur-email" class="erreur"></span>
+
+                        <br>
+
+                        <label for="adresse">Quelle est l'adresse civique où récupérer l'animal ?</label><br>
+                        <input type="text" id="adresse" name="adresse" placeholder="ex: 123 rue Principale"><br>
+                        <span id="erreur-adresse-civique" class="erreur"></span>
+
+                        <br>
+
+                        <label for="ville">Quelle est la ville ?</label><br>
+                        <input type="text" id="ville" name="ville"><br>
+                        <span id="erreur-ville" class="erreur"></span>
+
+                        <br>
+
+                        <label for="cp">Quelle est le code postal ?</label><br>
+                        <input type="text" id="cp" name="cp" placeholder="ex: H0H 0H0"><br>
+                        <span id="erreur-code-postal" class="erreur"></span>
+
+                        <br>
+                        <button type="submit" id="boutton_soumettre" class="boutton-style">Soumettre</button>
+                    </form>
+
+                </div>
+            </div>
+        </section>   
+    </main> 
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reusltats de recherche</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">AM2000</div>
+        <nav class="menu">
+            <a href="/" id="navigation">Revenir à l'acceuil</a>
+        </nav>
+    </header>
+    <main>
+        <section class="search-bar">
+            <h2>Barre de recherche</h2>
+            <br>
+            <div class="search-container">
+                <form action="/recherche" method="get" class="search-container">
+                    <input type="text" placeholder="Rechercher..." name="search" id="champRecherche">
+                    <button type="submit" id="boutonRecherche">Rechercher</button>
+                </form>    
+            </div>    
+        </section>
+        <h1 class="msg_not_found_1"> Il y a eu une erreur lors de votre soumission, veuillez réessayer ! </h1>
+        <div id ="container_bad_request">
+            <img id="img_bad_request" src="erreur_400.webp" alt="Aucun résultat trouvé">
+        </div>
+    </main>
+</body>
+</html>
