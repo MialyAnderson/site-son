@@ -1,4 +1,4 @@
 export FLASK_APP=index.py
 
-run:
+start:
 	flask run
